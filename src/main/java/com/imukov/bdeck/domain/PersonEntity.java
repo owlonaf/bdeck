@@ -3,11 +3,9 @@ package com.imukov.bdeck.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -18,11 +16,13 @@ import java.util.UUID;
 public class PersonEntity {
 
     @Id
-    @Column(name = "id")
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(name = "id", unique = true)
     private UUID id;
     @Column(name = "name")
     private String name;
-    @Column(name = "nickname")
+    @Column(name = "nickname", unique = true)
     private String nickname;
     @Column(name = "password")
     private String password;
