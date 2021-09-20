@@ -27,4 +27,9 @@ public class PersonEntity {
     @Column(name = "password")
     private String password;
 
+    public PersonEntity(String name, String nickname, String password) {
+        this.name = name;
+        this.nickname = nickname;
+        this.password = password;
+    }
 }

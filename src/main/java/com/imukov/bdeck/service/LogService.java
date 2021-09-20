@@ -6,4 +6,8 @@ public interface LogService {
     public PersonVo registred(String name, String nickname, String password, String confirmedPassword);
 
     public PersonVo login(String nickname, String password);
+
+    public void deleteProfile(PersonVo personVo, String password);
+
+    public PersonVo changePassword(PersonVo personVo, String oldPassword, String newPassword, String oneMorePassword);
 }
