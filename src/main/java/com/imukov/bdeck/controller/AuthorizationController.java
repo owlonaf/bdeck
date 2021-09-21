@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/auth")
 public class AuthorizationController {
 
-    @Autowired
+    /* @Autowired
     private LogService logService;
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseBody
-    public
+    public*/
 }
