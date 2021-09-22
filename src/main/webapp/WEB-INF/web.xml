@@ -1,17 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
-	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-
-    <servlet>
-        <servlet-name>Test</servlet-name>
-        <servlet-class>com.imukov.bdeck.Start</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>Test</servlet-name>
-        <url-pattern>/st</url-pattern>
-    </servlet-mapping>
-
-
-</web-app>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition name="electum.navigator.matter" extends="electum.base">
+        <put-attribute name="title" type="string" value="Утвержденные дела"/>
+        <put-attribute name="head.extra" value="/electum/view/implementation/matterNavigator.jsp"/>
+    </definition>
+</tiles-definitions>
