@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition name="electum.navigator.matter" extends="electum.base">
+        <put-attribute name="title" type="string" value="Утвержденные дела"/>
+        <put-attribute name="head.extra" value="/electum/view/implementation/matterNavigator.jsp"/>
+    </definition>
+</tiles-definitions>
