@@ -1,4 +1,4 @@
-Ext.define('bdeck.login.AuthPage', {
+Ext.define('AuthPage', {
     extend: 'Ext.panel.Panel',
     width: 500,
     height: 360,
