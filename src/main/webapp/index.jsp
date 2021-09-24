@@ -9,14 +9,22 @@
     <script type="text/javascript" src="resources/packages/ext-theme-neptune/build/ext-theme-neptune.js"></script>
     <script>
         Ext.onReady(function(){
-            var bigPannel=Ext.create('Ext.Panel', {
-                title: 'Приложение Ext JS 4',
-                width: 300,
-                height: 200,
-                renderTo:'tiptop'
+            var numberField=Ext.create('Ext.Panel', {
+                width:280,
+                height:120,
+                items:
+                    [{
+                        xtype: 'numberfield',
+                        fieldLabel: 'Выберите число',
+                        minValue: -5,
+                        maxValue: 100,
+                        allowDecimals: true,
+                        decimalPrecision: 1,
+                        step: 0.5
+                    }],
+                renderTo: Ext.getBody()
             });
         });
-        bigPannel.render(document.body);
     </script>
 </head>
 <body>
