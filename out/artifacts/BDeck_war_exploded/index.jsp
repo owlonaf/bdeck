@@ -9,20 +9,26 @@
     <script type="text/javascript" src="resources/packages/ext-theme-neptune/build/ext-theme-neptune.js"></script>
     <script>
         Ext.onReady(function(){
-            var numberField=Ext.create('Ext.Panel', {
-                width:280,
-                height:120,
-                items:
-                    [{
-                        xtype: 'numberfield',
-                        fieldLabel: 'Выберите число',
-                        minValue: -5,
-                        maxValue: 100,
-                        allowDecimals: true,
-                        decimalPrecision: 1,
-                        step: 0.5
-                    }],
-                renderTo: Ext.getBody()
+            Ext.create('Ext.panel.Panel', {
+                renderTo: Ext.getBody(),
+                width: 300,
+                height: 230,
+                padding:10,
+                title: 'Основной контейнер',
+                items: [
+                    {
+                        xtype: 'panel',
+                        title: 'Внутренняя панель 1',
+                        height: 100,
+                        width: '100%'
+                    },
+                    {
+                        xtype: 'panel',
+                        title: 'Внутренняя панель 2',
+                        height: 100,
+                        width: '100%'
+                    }
+                ]
             });
         });
     </script>

@@ -1,8 +1,8 @@
-Ext.define('AuthPage', {
+Ext.define('bdeck.AuthPage', {
     extend: 'Ext.panel.Panel',
     width: 500,
     height: 360,
-    alias: 'widget.authPage',
+    requires: 'bdeck.AuthPage',
 
     initComponent : function () {
         var me = this;
@@ -74,6 +74,8 @@ Ext.define('AuthPage', {
                     textt,
                 ]
             })
-        })
+        });
+
+        me.callParent(arguments);
     }
 });
