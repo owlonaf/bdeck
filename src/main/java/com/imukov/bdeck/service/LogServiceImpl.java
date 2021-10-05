@@ -1,26 +1,24 @@
 package com.imukov.bdeck.service;
 
-import com.imukov.bdeck.dao.PersonDao;
 import com.imukov.bdeck.domain.PersonEntity;
 import com.imukov.bdeck.repository.PersonRepository;
 import com.imukov.bdeck.vo.PersonVo;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
 @Service
-@Transactional
+@RequiredArgsConstructor
 public class LogServiceImpl implements LogService{
 
-    @Autowired
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
 
     @Override
     public PersonVo registred(String name, String nickname, String password, String confirmedPassword){
         PersonEntity person = null;
         if (password == confirmedPassword){
-            person = personRepository.saveAndFlush(new PersonEntity(name, nickname, password));
+            person = personRepository.save(new PersonEntity(name, nickname, password));
         }
         return new PersonVo(person);
     }
@@ -35,6 +33,7 @@ public class LogServiceImpl implements LogService{
     }
 
     @Override
+    @Transactional
     public void deleteProfile(PersonVo personVo, String password){
         PersonEntity person = personRepository.findPersonEntityByNickname(personVo.getNickname());
         if (person.getPassword() == password){
