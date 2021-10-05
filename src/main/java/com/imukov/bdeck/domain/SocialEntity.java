@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.UUID;
 
 @Entity
 @Table(name = "social_table")
@@ -16,8 +17,8 @@ import javax.persistence.Table;
 @NoArgsConstructor
 public class SocialEntity {
     @Id
-    @Column(name = "user")
-    private String user;
+    @Column(name = "id")
+    private UUID id;
     @Column(name = "vk")
     private String vk;
     @Column(name = "inst")

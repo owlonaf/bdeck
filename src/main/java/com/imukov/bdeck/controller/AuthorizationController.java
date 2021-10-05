@@ -1,5 +1,5 @@
 package com.imukov.bdeck.controller;
-
+/*
 import com.imukov.bdeck.service.LogService;
 import com.imukov.bdeck.vo.PersonVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,3 +25,4 @@ public class AuthorizationController {
         return logService.registred(name, nickname, password, confirmPassword);
     }
 }
+*/

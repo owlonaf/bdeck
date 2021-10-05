@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.UUID;
 
 @Repository
 public class SocialDaoImpl implements SocialDao{
@@ -21,9 +22,9 @@ public class SocialDaoImpl implements SocialDao{
     }
 
     @Override
-    public void setSocialInfo(String user, String vk, String inst, String tg, String yt) {
+    public void setSocialInfo(UUID id, String vk, String inst, String tg, String yt) {
         entityManager.getTransaction().begin();
-        entityManager.persist(new SocialEntity(user, vk, inst, tg, yt));
+        entityManager.persist(new SocialEntity(id, vk, inst, tg, yt));
         entityManager.getTransaction().commit();
     }
 }
