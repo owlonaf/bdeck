@@ -54,7 +54,7 @@ Ext.define('Ext.data.soap.Proxy', {
         *     
         * At least one operation is required, but additional operations do not need to be configured
         * if they will not be used.  For example, if this proxy is only used for read operations
-        * the following configuration will be sufficient:
+        * the following com.imukov.bdeck.configuration will be sufficient:
         * 
         *     api: {
         *         read: 'Foo'

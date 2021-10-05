@@ -3703,7 +3703,7 @@ Ext.define('Ext.draw.modifier.Highlight', {
  *          radius: 5
  *      });
  *
- * Sprites can also be added to the surface as a configuration object:
+ * Sprites can also be added to the surface as a com.imukov.bdeck.configuration object:
  *
  *      var sprite = drawContainer.getSurface('main').add({
  *          type: 'circle',
@@ -6817,7 +6817,7 @@ Ext.define('Ext.draw.sprite.Instancing', {
     /**
      * Creates a new sprite instance.
      * 
-     * @param {Object} config The configuration of the instance.
+     * @param {Object} config The com.imukov.bdeck.configuration of the instance.
      * @param {Object} [data]
      * @param {Boolean} [bypassNormalization] 'true' to bypass attribute normalization.
      * @param {Boolean} [avoidCopy] 'true' to avoid copying.
@@ -8119,7 +8119,7 @@ Ext.define('Ext.draw.gradient.Radial', {
  *         y: 100
  *     });
  *
- * The configuration object passed in the `add` method is the same as described in the {@link Ext.draw.sprite.Sprite}
+ * The com.imukov.bdeck.configuration object passed in the `add` method is the same as described in the {@link Ext.draw.sprite.Sprite}
  * class documentation.
  *
  * ## Example
@@ -8399,7 +8399,7 @@ Ext.define('Ext.draw.Surface', {
     /**
      * Add a Sprite to the surface.
      * You can put any number of object as parameter.
-     * See {@link Ext.draw.sprite.Sprite} for the configuration object to be passed into this method.
+     * See {@link Ext.draw.sprite.Sprite} for the com.imukov.bdeck.configuration object to be passed into this method.
      *
      * For example:
      *
@@ -12353,7 +12353,7 @@ Ext.define('Ext.draw.Container', {
      * @param {Object} [config] The following config options are supported:
      *
      * @param {String} config.url The url to post the data to. Defaults to
-     * the {@link #defaultUrl} configuration on the class.
+     * the {@link #defaultUrl} com.imukov.bdeck.configuration on the class.
      *
      * @param {String} config.format The format of image to export. See the
      * {@link #supportedFormats}. Defaults to 'png' on the Sencha IO server.
@@ -13196,7 +13196,7 @@ Ext.define('Ext.chart.label.Label', {
 
     config: {
         /**
-         * @cfg {Object} fx Animation configuration.
+         * @cfg {Object} fx Animation com.imukov.bdeck.configuration.
          */
         fx: {
             customDurations: {
@@ -13356,7 +13356,7 @@ Ext.define('Ext.chart.series.Series', {
          *
          * @param {Object} sprite The sprite affected by the renderer. The visual attributes are in `sprite.attr`.
          * The data field is available in `sprite.getField()`.
-         * @param {Object} config The sprite configuration. It varies with the series and the type of sprite:
+         * @param {Object} config The sprite com.imukov.bdeck.configuration. It varies with the series and the type of sprite:
          * for instance, a Line chart sprite might have just the `x` and `y` properties while a Bar
          * chart sprite also has `width` and `height`. A `type` might be present too. For instance to
          * draw each marker and each segment of a Line chart, the renderer is called with the
@@ -13364,7 +13364,7 @@ Ext.define('Ext.chart.series.Series', {
          * @param {Object} rendererData A record with different properties depending on the type of chart.
          * The only guaranteed property is `rendererData.store`, the store used by the series.
          * In some cases, a store may not exist: for instance a Gauge chart may read its value directly
-         * from its configuration; in this case rendererData.store is null and the value is
+         * from its com.imukov.bdeck.configuration; in this case rendererData.store is null and the value is
          * available in rendererData.value.
          * @param {Number} index The index of the sprite. It is usually the index of the store record associated
          * with the sprite, in which case the record can be obtained with `store.getData().items[index]`.
@@ -13395,7 +13395,7 @@ Ext.define('Ext.chart.series.Series', {
         triggerAfterDraw: false,
 
         /**
-         * @cfg {Object} style Custom style configuration for the sprite used in the series.
+         * @cfg {Object} style Custom style com.imukov.bdeck.configuration for the sprite used in the series.
          * It overrides the style that is provided by the current theme.
          */
         style: {},
@@ -13407,7 +13407,7 @@ Ext.define('Ext.chart.series.Series', {
 
         /**
          * @private
-         * @cfg {Object} themeStyle Style configuration that is provided by the current theme.
+         * @cfg {Object} themeStyle Style com.imukov.bdeck.configuration that is provided by the current theme.
          * It is composed of five objects:
          * @cfg {Object} themeStyle.style Properties common to all the series, for instance the 'lineWidth'.
          * @cfg {Object} themeStyle.subStyle Cyclic used if the series has multiple sprites.
@@ -13603,14 +13603,14 @@ Ext.define('Ext.chart.series.Series', {
         },
 
         /**
-         * @cfg {Object} animation The series animation configuration.
+         * @cfg {Object} animation The series animation com.imukov.bdeck.configuration.
          */
         animation: null,
 
         /**
          * @cfg {Object} tooltip
          * Add tooltips to the visualization's markers. The options for the tooltip are the
-         * same configuration used with {@link Ext.tip.ToolTip}. For example:
+         * same com.imukov.bdeck.configuration used with {@link Ext.tip.ToolTip}. For example:
          *
          *     tooltip: {
          *       trackMouse: true,
@@ -15300,14 +15300,14 @@ Ext.define('Ext.chart.axis.sprite.Axis', {
         /**
          * @cfg {Object} label
          *
-         * The label configuration object for the Axis. This object may include style attributes
+         * The label com.imukov.bdeck.configuration object for the Axis. This object may include style attributes
          * like `spacing`, `padding`, `font` that receives a string or number and
          * returns a new string with the modified values.
          */
         label: null,
 
         /**
-         * @cfg {Object|Ext.chart.axis.layout.Layout} layout The layout configuration used by the axis.
+         * @cfg {Object|Ext.chart.axis.layout.Layout} layout The layout com.imukov.bdeck.configuration used by the axis.
          */
         layout: null,
 
@@ -16845,7 +16845,7 @@ Ext.define('Ext.chart.axis.Axis', {
         /**
          * @cfg {Object} label
          *
-         * The label configuration object for the Axis. This object may include style attributes
+         * The label com.imukov.bdeck.configuration object for the Axis. This object may include style attributes
          * like `spacing`, `padding`, `font` that receives a string or number and
          * returns a new string with the modified values.
          *
@@ -16855,7 +16855,7 @@ Ext.define('Ext.chart.axis.Axis', {
 
         /**
          * @cfg {Object} grid
-         * The grid configuration object for the Axis style. Can contain `stroke` or `fill` attributes.
+         * The grid com.imukov.bdeck.configuration object for the Axis style. Can contain `stroke` or `fill` attributes.
          * Also may contain an `odd` or `even` property in which you only style things on odd or even rows.
          * For example:
          *
@@ -16873,7 +16873,7 @@ Ext.define('Ext.chart.axis.Axis', {
 
         /**
          * @cfg {Array|Object} limits
-         * The limit lines configuration for the axis.
+         * The limit lines com.imukov.bdeck.configuration for the axis.
          * For example:
          *
          *     limits: [{
@@ -16893,7 +16893,7 @@ Ext.define('Ext.chart.axis.Axis', {
         /**
          * @cfg {Function} renderer Allows direct customisation of rendered axis sprites.
          * @param {String} label The label.
-         * @param {Object|Ext.chart.axis.layout.Layout} layout The layout configuration used by the axis.
+         * @param {Object|Ext.chart.axis.layout.Layout} layout The layout com.imukov.bdeck.configuration used by the axis.
          * @param {String} lastLabel The last label.
          * @return {String} The label to display.
          */
@@ -18070,7 +18070,7 @@ Ext.define('Ext.chart.Legend', {
 /**
  * The Ext.chart package provides the capability to visualize data.
  * Each chart binds directly to a {@link Ext.data.Store store} enabling automatic updates of the chart.
- * A chart configuration object has some overall styling options as well as an array of axes
+ * A chart com.imukov.bdeck.configuration object has some overall styling options as well as an array of axes
  * and series. A chart instance example could look like this:
  *
  *     new Ext.chart.CartesianChart({
@@ -18346,7 +18346,7 @@ Ext.define('Ext.chart.AbstractChart', {
         style: null,
 
         /**
-         * @cfg {Boolean/Object} shadow (optional) `true` for the default shadow configuration 
+         * @cfg {Boolean/Object} shadow (optional) `true` for the default shadow com.imukov.bdeck.configuration
          * `{shadowOffsetX: 2, shadowOffsetY: 2, shadowBlur: 3, shadowColor: '#444'}`
          * or a standard shadow config object to be used for default chart shadows.
          */
@@ -18470,7 +18470,7 @@ Ext.define('Ext.chart.AbstractChart', {
          *         }]
          *     });
          *
-         * When adding an interaction which uses only its default configuration (no extra properties other than `type`),
+         * When adding an interaction which uses only its default com.imukov.bdeck.configuration (no extra properties other than `type`),
          * you can alternately specify only the type as a String rather than the full Object:
          *
          *     interactions: ['reset', 'rotate']
@@ -20604,7 +20604,7 @@ Ext.define('Ext.chart.axis.Category', {
  * the axis onto the left part of the surface by setting _position_ to _left_.
  * We bind three different store fields to this axis by setting _fields_ to an array.
  * We set the title of the axis to _Number of Hits_ by using the _title_ property.
- * We use a _grid_ configuration to set odd background rows to a certain style and even rows
+ * We use a _grid_ com.imukov.bdeck.configuration to set odd background rows to a certain style and even rows
  * to be transparent/ignored.
  *
  */
@@ -20859,7 +20859,7 @@ Ext.define('Ext.chart.interactions.CrossZoom', {
          *
          * - An Object whose keys correspond to the {@link Ext.chart.axis.Axis#position position} of each
          *   axis that should be made navigable. Each key's value can either be an Object with further
-         *   configuration options for each axis or simply `true` for a default set of options.
+         *   com.imukov.bdeck.configuration options for each axis or simply `true` for a default set of options.
          *       {
          *           type: 'crosszoom',
          *           axes: {
@@ -21299,7 +21299,7 @@ Ext.define('Ext.chart.interactions.Crosshair', {
          *         }
          *     }
          *
-         * In case per axis configuration is used, an object with keys corresponding
+         * In case per axis com.imukov.bdeck.configuration is used, an object with keys corresponding
          * to the {@link Ext.chart.axis.Axis#position position} must be provided.
          *
          *     {
@@ -21803,7 +21803,7 @@ Ext.define('Ext.chart.interactions.ItemHighlight', {
  *         }
  *     });
  *
- * The configuration object for the `panzoom` interaction type should specify which axes
+ * The com.imukov.bdeck.configuration object for the `panzoom` interaction type should specify which axes
  * will be made navigable via the `axes` config. See the {@link #axes} config documentation
  * for details on the allowed formats. If the `axes` config is not specified, it will default
  * to making all axes navigable with the default axis options.
@@ -21827,7 +21827,7 @@ Ext.define('Ext.chart.interactions.PanZoom', {
          *
          * - An Object with keys corresponding to the {@link Ext.chart.axis.Axis#position position} of each
          *   axis that should be made navigable. Each key's value can either be an Object with further
-         *   configuration options for each axis or simply `true` for a default set of options.
+         *   com.imukov.bdeck.configuration options for each axis or simply `true` for a default set of options.
          *
          *       {
          *           type: 'panzoom',
@@ -22683,7 +22683,7 @@ Ext.define('Ext.chart.series.StackedCartesian', {
     config: {
         /**
          * @cfg {Boolean}
-         * 'true' to display the series in its stacked configuration.
+         * 'true' to display the series in its stacked com.imukov.bdeck.configuration.
          */
         stacked: true,
 
@@ -26048,8 +26048,8 @@ Ext.define('Ext.chart.series.sprite.Line', {
  *
  * Creates a Line Chart. A Line Chart is a useful visualization technique to display quantitative information for different
  * categories or other real values (as opposed to the bar chart), that can show some progression (or regression) in the dataset.
- * As with all other series, the Line Series must be appended in the *series* Chart array configuration. See the Chart
- * documentation for more information. A typical configuration object for the line series could be:
+ * As with all other series, the Line Series must be appended in the *series* Chart array com.imukov.bdeck.configuration. See the Chart
+ * documentation for more information. A typical com.imukov.bdeck.configuration object for the line series could be:
  *
  *     @example
  *     Ext.create('Ext.Container', {
@@ -26123,17 +26123,17 @@ Ext.define('Ext.chart.series.sprite.Line', {
  *         }
  *     });
  *
- * In this configuration we're adding two series (or lines), one bound to the `data1`
+ * In this com.imukov.bdeck.configuration we're adding two series (or lines), one bound to the `data1`
  * property of the store and the other to `data3`. The type for both configurations is
  * `line`. The `xField` for both series is the same, the `name` property of the store.
  * Both line series share the same axis, the left axis. You can set particular marker
- * configuration by adding properties onto the marker object. Both series have
+ * com.imukov.bdeck.configuration by adding properties onto the marker object. Both series have
  * an object as highlight so that markers animate smoothly to the properties in highlight
  * when hovered. The second series has `fill = true` which means that the line will also
  * have an area below it of the same color.
  *
  * **Note:** In the series definition remember to explicitly set the axis to bind the
- * values of the line series to. This can be done by using the `axis` configuration property.
+ * values of the line series to. This can be done by using the `axis` com.imukov.bdeck.configuration property.
  */
 Ext.define('Ext.chart.series.Line', {
     extend: 'Ext.chart.series.Cartesian',
@@ -26497,8 +26497,8 @@ Ext.define('Ext.chart.series.sprite.PieSlice', {
  *
  * Creates a Pie Chart. A Pie Chart is a useful visualization technique to display quantitative information for different
  * categories that also have a meaning as a whole.
- * As with all other series, the Pie Series must be appended in the *series* Chart array configuration. See the Chart
- * documentation for more information. A typical configuration object for the pie series could be:
+ * As with all other series, the Pie Series must be appended in the *series* Chart array com.imukov.bdeck.configuration. See the Chart
+ * documentation for more information. A typical com.imukov.bdeck.configuration object for the pie series could be:
  *
  *     @example
  *     Ext.create('Ext.Container', {
@@ -26531,9 +26531,9 @@ Ext.define('Ext.chart.series.sprite.PieSlice', {
  *         }
  *     });
  *
- * In this configuration we set `pie` as the type for the series, set an object with specific style properties for highlighting options
+ * In this com.imukov.bdeck.configuration we set `pie` as the type for the series, set an object with specific style properties for highlighting options
  * (triggered when hovering elements). We also set true to `showInLegend` so all the pie slices can be represented by a legend item.
- * We set `data1` as the value of the field to determine the angle span for each pie slice. We also set a label configuration object
+ * We set `data1` as the value of the field to determine the angle span for each pie slice. We also set a label com.imukov.bdeck.configuration object
  * where we set the field name of the store field to be rendered as text for the label. The labels will also be displayed rotated.
  *
  */
@@ -27812,8 +27812,8 @@ Ext.define('Ext.chart.series.sprite.Radar', {
  *
  * Creates a Radar Chart. A Radar Chart is a useful visualization technique for comparing different quantitative values for
  * a constrained number of categories.
- * As with all other series, the Radar series must be appended in the *series* Chart array configuration. See the Chart
- * documentation for more information. A typical configuration object for the radar series could be:
+ * As with all other series, the Radar series must be appended in the *series* Chart array com.imukov.bdeck.configuration. See the Chart
+ * documentation for more information. A typical com.imukov.bdeck.configuration object for the radar series could be:
  *
  *     @example
  *     Ext.create('Ext.Container', {
@@ -28124,8 +28124,8 @@ Ext.define('Ext.chart.series.sprite.Scatter', {
  *
  * Creates a Scatter Chart. The scatter plot is useful when trying to display more than two variables in the same visualization.
  * These variables can be mapped into x, y coordinates and also to an element's radius/size, color, etc.
- * As with all other series, the Scatter Series must be appended in the *series* Chart array configuration. See the Chart
- * documentation for more information on creating charts. A typical configuration object for the scatter could be:
+ * As with all other series, the Scatter Series must be appended in the *series* Chart array com.imukov.bdeck.configuration. See the Chart
+ * documentation for more information on creating charts. A typical com.imukov.bdeck.configuration object for the scatter could be:
  *
  *     @example
  *     Ext.create('Ext.Container', {
@@ -28183,9 +28183,9 @@ Ext.define('Ext.chart.series.sprite.Scatter', {
  *         }
  *     });
  *
- * In this configuration we add three different categories of scatter series. Each of them is bound to a different field of the same data store,
+ * In this com.imukov.bdeck.configuration we add three different categories of scatter series. Each of them is bound to a different field of the same data store,
  * `data1`, `data2` and `data3` respectively. All x-fields for the series must be the same field, in this case `name`.
- * Each scatter series has a different styling configuration for markers, specified by the `marker` object. Finally we set the left axis as
+ * Each scatter series has a different styling com.imukov.bdeck.configuration for markers, specified by the `marker` object. Finally we set the left axis as
  * axis to show the current values of the elements.
  *
  */

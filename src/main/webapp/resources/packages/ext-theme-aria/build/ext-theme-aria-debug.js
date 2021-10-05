@@ -3579,7 +3579,7 @@ Ext.define('Ext.ux.CellDragDrop', {
     /**
      * @cfg {Object/Boolean} containerScroll
      * True to register this container with the Scrollmanager for auto scrolling during drag operations.
-     * A {@link Ext.dd.ScrollManager} configuration may also be passed.
+     * A {@link Ext.dd.ScrollManager} com.imukov.bdeck.configuration may also be passed.
      */
     containerScroll: false,
 
@@ -3918,7 +3918,7 @@ Ext.define('Ext.ux.DataView.Animated', {
     /**
      * @property defaults
      * @type Object
-     * Default configuration options for all DataViewTransition instances
+     * Default com.imukov.bdeck.configuration options for all DataViewTransition instances
      */
     defaults: {
         duration  : 750,
@@ -4771,7 +4771,7 @@ Ext.ux.DataViewTransition = Ext.extend(Object, {
     /**
      * @property defaults
      * @type Object
-     * Default configuration options for all DataViewTransition instances
+     * Default com.imukov.bdeck.configuration options for all DataViewTransition instances
      */
     defaults: {
         duration  : 750,
@@ -6828,7 +6828,7 @@ Ext.define('Ext.ux.ProgressBarPager', {
     defaultText    : 'Loading...',
     /**
      * @cfg {Object} defaultAnimCfg
-     * <p>A {@link Ext.fx.Anim Ext.fx.Anim} configuration object.</p>
+     * <p>A {@link Ext.fx.Anim Ext.fx.Anim} com.imukov.bdeck.configuration object.</p>
      */
     defaultAnimCfg : {
 		duration: 1000,
@@ -7193,7 +7193,7 @@ Ext.define('Ext.ux.Spotlight', {
 
 /**
  * Plugin for adding a close context menu to tabs. Note that the menu respects
- * the closable configuration on the tab. As such, commands like remove others
+ * the closable com.imukov.bdeck.configuration on the tab. As such, commands like remove others
  * and remove all will not remove items that are not closable.
  */
 Ext.define('Ext.ux.TabCloseMenu', {
@@ -7860,7 +7860,7 @@ Ext.define('Ext.ux.TreePicker', {
         /**
          * @cfg {String} displayField
          * The field inside the model that will be used as the node's text.
-         * Defaults to the default value of {@link Ext.tree.Panel}'s `displayField` configuration.
+         * Defaults to the default value of {@link Ext.tree.Panel}'s `displayField` com.imukov.bdeck.configuration.
          */
         displayField: null,
 
@@ -8747,7 +8747,7 @@ Ext.define('Ext.ux.ajax.SimManager', {
 
     /**
      * @cfg {String} defaultType
-     * The default `type` to apply to generic {@link Ext.ux.ajax.Simlet} configuration objects. The
+     * The default `type` to apply to generic {@link Ext.ux.ajax.Simlet} com.imukov.bdeck.configuration objects. The
      * default is 'basic'.
      */
     defaultType: 'basic',
@@ -8811,8 +8811,8 @@ Ext.define('Ext.ux.ajax.SimManager', {
     },
 
     /**
-     * Initializes this singleton and applies configuration options.
-     * @param {Object} config An optional object with configuration properties to apply.
+     * Initializes this singleton and applies com.imukov.bdeck.configuration options.
+     * @param {Object} config An optional object with com.imukov.bdeck.configuration properties to apply.
      * @return {Ext.ux.ajax.SimManager} this
      * @markdown
      */
@@ -8929,7 +8929,7 @@ Ext.define('Ext.ux.ajax.XmlSimlet', {
     alias: 'simlet.xml',
 
     /**
-     * This template is used to populate the XML response. The configuration of the Reader
+     * This template is used to populate the XML response. The com.imukov.bdeck.configuration of the Reader
      * is available so that its `root` and `record` properties can be used as well as the
      * `fields` of the associated `model`. But beyond that, the way these pieces are put
      * together in the document requires the flexibility of a template.
@@ -9856,7 +9856,7 @@ Ext.define('Ext.ux.desktop.Desktop', {
     },
 
     //------------------------------------------------------
-    // Overrideable configuration creation methods
+    // Overrideable com.imukov.bdeck.configuration creation methods
 
     createDataView: function () {
         var me = this;
@@ -9990,7 +9990,7 @@ Ext.define('Ext.ux.desktop.Desktop', {
     },
 
     //------------------------------------------------------
-    // Dynamic (re)configuration methods
+    // Dynamic (re)com.imukov.bdeck.configuration methods
 
     getWallpaper: function () {
         return this.wallpaper.wallpaper;
@@ -10245,7 +10245,7 @@ Ext.define('Ext.ux.desktop.App', {
     },
 
     /**
-     * This method returns the configuration object for the Desktop object. A derived
+     * This method returns the com.imukov.bdeck.configuration object for the Desktop object. A derived
      * class can override this method, call the base version to build the config and
      * then modify the returned object before returning it.
      */
@@ -10262,7 +10262,7 @@ Ext.define('Ext.ux.desktop.App', {
     getModules: Ext.emptyFn,
 
     /**
-     * This method returns the configuration object for the Start Button. A derived
+     * This method returns the com.imukov.bdeck.configuration object for the Start Button. A derived
      * class can override this method, call the base version to build the config and
      * then modify the returned object before returning it.
      */
@@ -10293,7 +10293,7 @@ Ext.define('Ext.ux.desktop.App', {
     },
 
     /**
-     * This method returns the configuration object for the TaskBar. A derived class
+     * This method returns the com.imukov.bdeck.configuration object for the TaskBar. A derived class
      * can override this method, call the base version to build the config and then
      * modify the returned object before returning it.
      */
@@ -10548,7 +10548,7 @@ Ext.define('Ext.ux.desktop.TaskBar', {
     },
 
     /**
-     * This method returns the configuration object for the Quick Start toolbar. A derived
+     * This method returns the com.imukov.bdeck.configuration object for the Quick Start toolbar. A derived
      * class can override this method, call the base version to build the config and
      * then modify the returned object before returning it.
      */
@@ -10576,7 +10576,7 @@ Ext.define('Ext.ux.desktop.TaskBar', {
     },
 
     /**
-     * This method returns the configuration object for the Tray toolbar. A derived
+     * This method returns the com.imukov.bdeck.configuration object for the Tray toolbar. A derived
      * class can override this method, call the base version to build the config and
      * then modify the returned object before returning it.
      */
@@ -13055,8 +13055,8 @@ Ext.define('Ext.ux.form.MultiSelect', {
 
     /**
      * @cfg {Object} listConfig
-     * An optional set of configuration properties that will be passed to the {@link Ext.view.BoundList}'s constructor.
-     * Any configuration that is valid for BoundList can be included.
+     * An optional set of com.imukov.bdeck.configuration properties that will be passed to the {@link Ext.view.BoundList}'s constructor.
+     * Any com.imukov.bdeck.configuration that is valid for BoundList can be included.
      */
 
     //TODO - doc me.addEvents('drop');
