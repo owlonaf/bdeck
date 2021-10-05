@@ -15,7 +15,7 @@ public class AuthorizationController {
 
     @Autowired
     private LogService logService;
-    /*
+
     @RequestMapping(method = RequestMethod.POST)
     @ResponseBody
     public PersonVo registration (@RequestParam("name") String name,
@@ -23,5 +23,5 @@ public class AuthorizationController {
                                   @RequestParam("password") String password,
                                   @RequestParam("confirmPassword") String confirmPassword){
         return logService.registred(name, nickname, password, confirmPassword);
-    }*/
+    }
 }
