@@ -5,6 +5,11 @@ spring:
   profiles:
     active: dev
 
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
   datasource:
     url: jdbc:postgresql://localhost:5432/bdeckdb
     username: postgres
