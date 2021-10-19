@@ -9,7 +9,12 @@
     <script type="text/javascript" src="../../resources/packages/ext-theme-neptune/build/ext-theme-neptune.js"></script>
     <script>
         Ext.onReady(function(){
-            var numberField=Ext.create('Ext.Panel', {
+            var tip = Ext.create('Ext.tip.ToolTip', {
+                target: 'numberField',
+                html: 'Press this button to clear the form'
+            });
+
+            var numberField = Ext.create('Ext.Panel', {
                 width:280,
                 height:120,
                 items:
@@ -20,7 +25,8 @@
                         maxValue: 100,
                         allowDecimals: true,
                         decimalPrecision: 1,
-                        step: 0.5
+                        step: 0.5,
+                        tooltip: 'бака'
                     }],
                 renderTo: Ext.getBody()
             });
