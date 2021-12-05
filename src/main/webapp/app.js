@@ -1,15 +1,17 @@
 Ext.application({
-    requires: ['Ext.container.Viewport'],
-    name: 'BookApp',
+    name: 'CarCatalog',
 
-    appFolder: 'app',
+    views: [
+        'AddCarFormView',
+        'CarCatalogView',
+        'CarGridView',
+    ],
 
-    launch: function() {
+    launch: function () {
         Ext.create('Ext.container.Viewport', {
             layout: 'fit',
             items: {
-                xtype: 'panel',
-                html: '<h2>Библиотека</h2>'
+                xtype  : 'carCatalogView'
             }
         });
     }
