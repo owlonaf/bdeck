@@ -1,10 +1,11 @@
 Ext.application({
-    name: 'CarCatalog',
+    name: 'Bdeck',
 
     views: [
         'AddCarFormView',
         'CarCatalogView',
         'CarGridView',
+        'NewGrid',
     ],
 
     launch: function () {

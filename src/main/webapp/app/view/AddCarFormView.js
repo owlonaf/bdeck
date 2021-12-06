@@ -1,4 +1,4 @@
-Ext.define('CarCatalog.view.AddCarFormView', {
+Ext.define('Bdeck.view.AddCarFormView', {
     extend: 'Ext.window.Window',
     alias: 'widget.addCarFormView',
     autoShow: true,

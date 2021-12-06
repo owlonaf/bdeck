@@ -1,6 +1,6 @@
-Ext.define('Bdeck.view.CarGridView', {
+Ext.define('Bdeck.view.NewGrid', {
     extend: 'Ext.grid.Panel',
-    alias: 'widget.carGridView',
+    alias: 'widget.newGrid',
     width: 400,
     height: 300,
     frame: true,
@@ -9,30 +9,9 @@ Ext.define('Bdeck.view.CarGridView', {
         markDirty:false
     },
     columns: [
-        {
-            text: 'Модель',
-            flex: 1,
-            sortable: true,
-            dataIndex: 'name',
-            editor: {
-                xtype:'textfield',
-                allowBlank: false,
-                blankText: 'Это поле должно быть заполнено'
-            }
-        },
-        {
-            flex: 2,
-            text: 'Цена',
-            sortable: true,
-            dataIndex: 'price',
-            editor: {
-                xtype:'textfield',
-                regex: /^([0-9]{1,20})*$/,
-                regexText: 'Цена должна состоять из цифр',
-                allowBlank: false,
-                blankText: 'Это поле должно быть заполнено'
-            }
-        }
+        { text: 'Name',  dataIndex: 'name' },
+        { text: 'Email', dataIndex: 'email', flex: 1 },
+        { text: 'Phone', dataIndex: 'phone' }
     ],
     plugins: [
         Ext.create('Ext.grid.plugin.RowEditing', {

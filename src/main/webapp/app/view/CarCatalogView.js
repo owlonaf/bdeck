@@ -1,13 +1,12 @@
-Ext.define('CarCatalog.view.CarCatalogView', {
+Ext.define('Bdeck.view.CarCatalogView', {
     extend: 'Ext.panel.Panel',
     width: 500,
     height: 360,
-    padding: 10,
     alias: 'widget.carCatalogView',
     layout: 'border',
     items: [
         {
-            xtype: 'carGridView',
+            xtype: 'newGrid',
             region: 'center'
         },
         {
