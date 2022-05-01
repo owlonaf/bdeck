@@ -8,7 +8,7 @@ spring:
   mvc:
     view:
       prefix: /
-      suffix: .jsp
+      suffix: .html
 
   datasource:
     url: jdbc:postgresql://localhost:5432/bdeckdb

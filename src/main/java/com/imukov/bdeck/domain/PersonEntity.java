@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user_table")
+@Table(name = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,11 +18,11 @@ public class PersonEntity {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(name = "id", unique = true)
+    @Column(name = "id")
     private UUID id;
     @Column(name = "name")
     private String name;
-    @Column(name = "nickname", unique = true)
+    @Column(name = "nickname")
     private String nickname;
     @Column(name = "password")
     private String password;

@@ -1,11 +1,13 @@
 package com.imukov.bdeck.vo;
 
 import com.imukov.bdeck.domain.PersonEntity;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.UUID;
 
 @Data
+@AllArgsConstructor
 public class PersonVo {
     private UUID id;
     private String name;

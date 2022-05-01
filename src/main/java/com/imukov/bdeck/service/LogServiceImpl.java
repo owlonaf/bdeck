@@ -7,17 +7,19 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class LogServiceImpl implements LogService{
+public class LogServiceImpl implements LogService {
 
     private final PersonRepository personRepository;
 
     @Override
-    public PersonVo registred(String name, String nickname, String password, String confirmedPassword){
+    public PersonVo registred(String name, String nickname, String password, String confirmedPassword) {
         PersonEntity person = null;
-        if (password == confirmedPassword){
+        if (password == confirmedPassword) {
             person = personRepository.save(new PersonEntity(name, nickname, password));
         }
         return new PersonVo(person);
@@ -26,7 +28,7 @@ public class LogServiceImpl implements LogService{
     @Override
     public PersonVo login(String nickname, String password) {
         PersonEntity person = personRepository.findPersonEntityByNickname(nickname);
-        if (person.getPassword() == password){
+        if (person.getPassword() == password) {
             return new PersonVo(person);
         }
         return null;
@@ -34,20 +36,30 @@ public class LogServiceImpl implements LogService{
 
     @Override
     @Transactional
-    public void deleteProfile(PersonVo personVo, String password){
+    public void deleteProfile(PersonVo personVo, String password) {
         PersonEntity person = personRepository.findPersonEntityByNickname(personVo.getNickname());
-        if (person.getPassword() == password){
+        if (person.getPassword() == password) {
             personRepository.delete(person);
         }
     }
 
     @Override
-    public PersonVo changePassword(PersonVo personVo, String oldPassword, String newPassword, String oneMorePassword){
+    public PersonVo changePassword(PersonVo personVo, String oldPassword, String newPassword, String oneMorePassword) {
         PersonEntity person = personRepository.findPersonEntityByNickname(personVo.getNickname());
-        if (person.getPassword() == oldPassword && newPassword == oneMorePassword){
+        if (person.getPassword() == oldPassword && newPassword == oneMorePassword) {
             person.setPassword(newPassword);
         }
         return new PersonVo(person);
     }
 
+    @Override
+    public List<PersonVo> getProfiles() {
+        personRepository.save(new PersonEntity("kkk", "lll", "123"));
+        List<PersonEntity> persons = personRepository.findAll();
+        List<PersonVo> result = new ArrayList<>();
+        for (PersonEntity personEntity : persons) {
+            result.add(new PersonVo(personEntity));
+        }
+        return result;
+    }
 }
