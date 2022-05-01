@@ -2,17 +2,14 @@ Ext.application({
     name: 'Bdeck',
 
     views: [
-        'AddCarFormView',
-        'CarCatalogView',
-        'CarGridView',
-        'NewGrid',
+        'MainToolbar',
     ],
 
     launch: function () {
         Ext.create('Ext.container.Viewport', {
             layout: 'fit',
             items: {
-                xtype  : 'carCatalogView'
+                xtype  : 'main-toolbar'
             }
         });
     }
