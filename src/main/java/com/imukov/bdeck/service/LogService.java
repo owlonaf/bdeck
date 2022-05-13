@@ -5,9 +5,9 @@ import com.imukov.bdeck.vo.PersonVo;
 import java.util.List;
 
 public interface LogService {
-    public PersonVo registred(String name, String nickname, String password, String confirmedPassword);
+    public PersonVo registred(String name, String username, String password, String confirmedPassword);
 
-    public PersonVo login(String nickname, String password);
+    public PersonVo login(String username, String password);
 
     public void deleteProfile(PersonVo personVo, String password);
 

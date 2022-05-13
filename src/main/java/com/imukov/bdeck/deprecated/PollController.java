@@ -1,7 +1,5 @@
-package com.imukov.bdeck.controller;
+package com.imukov.bdeck.deprecated;
 
-import com.imukov.bdeck.service.PollService;
-import com.imukov.bdeck.vo.PollVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

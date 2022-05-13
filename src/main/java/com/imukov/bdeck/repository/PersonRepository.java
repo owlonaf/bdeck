@@ -8,5 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface PersonRepository extends JpaRepository<PersonEntity, UUID> {
-    PersonEntity findPersonEntityByNickname(String nickname);
+    PersonEntity findPersonEntityByUsername(String username);
 }

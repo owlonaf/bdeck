@@ -1,6 +1,6 @@
-package com.imukov.bdeck.vo;
+package com.imukov.bdeck.deprecated;
 
-import com.imukov.bdeck.domain.PollEntity;
+import com.imukov.bdeck.deprecated.PollEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

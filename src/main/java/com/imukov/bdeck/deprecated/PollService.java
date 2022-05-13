@@ -1,7 +1,4 @@
-package com.imukov.bdeck.service;
-
-import com.imukov.bdeck.domain.PollEntity;
-import com.imukov.bdeck.vo.PollVo;
+package com.imukov.bdeck.deprecated;
 
 import java.util.List;
 

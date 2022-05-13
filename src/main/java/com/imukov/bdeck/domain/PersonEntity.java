@@ -22,14 +22,14 @@ public class PersonEntity {
     private UUID id;
     @Column(name = "name")
     private String name;
-    @Column(name = "nickname")
-    private String nickname;
+    @Column(name = "username")
+    private String username;
     @Column(name = "password")
     private String password;
 
-    public PersonEntity(String name, String nickname, String password) {
+    public PersonEntity(String name, String username, String password) {
         this.name = name;
-        this.nickname = nickname;
+        this.username = username;
         this.password = password;
     }
 }

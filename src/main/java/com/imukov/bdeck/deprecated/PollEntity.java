@@ -1,4 +1,4 @@
-package com.imukov.bdeck.domain;
+package com.imukov.bdeck.deprecated;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

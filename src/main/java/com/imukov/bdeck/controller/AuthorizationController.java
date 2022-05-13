@@ -1,11 +1,8 @@
 package com.imukov.bdeck.controller;
 
-import com.imukov.bdeck.domain.PersonEntity;
-import com.imukov.bdeck.repository.PersonRepository;
 import com.imukov.bdeck.service.LogService;
 import com.imukov.bdeck.vo.PersonVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,6 +25,11 @@ public class AuthorizationController {
     @GetMapping("/get")
     public List<PersonVo> getAll() {
         return logService.getProfiles();
+    }
+
+    @RequestMapping({ "/helllo" })
+    public String firstPage() {
+        return "Hello World";
     }
 
 }

@@ -1,6 +1,6 @@
-package com.imukov.bdeck.repository;
+package com.imukov.bdeck.deprecated;
 
-import com.imukov.bdeck.domain.PollEntity;
+import com.imukov.bdeck.deprecated.PollEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

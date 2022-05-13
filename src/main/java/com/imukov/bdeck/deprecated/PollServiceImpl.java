@@ -1,8 +1,5 @@
-package com.imukov.bdeck.service;
+package com.imukov.bdeck.deprecated;
 
-import com.imukov.bdeck.domain.PollEntity;
-import com.imukov.bdeck.repository.PollRepository;
-import com.imukov.bdeck.vo.PollVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

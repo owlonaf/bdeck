@@ -17,17 +17,17 @@ public class LogServiceImpl implements LogService {
     private final PersonRepository personRepository;
 
     @Override
-    public PersonVo registred(String name, String nickname, String password, String confirmedPassword) {
+    public PersonVo registred(String name, String username, String password, String confirmedPassword) {
         PersonEntity person = null;
         if (password == confirmedPassword) {
-            person = personRepository.save(new PersonEntity(name, nickname, password));
+            person = personRepository.save(new PersonEntity(name, username, password));
         }
         return new PersonVo(person);
     }
 
     @Override
-    public PersonVo login(String nickname, String password) {
-        PersonEntity person = personRepository.findPersonEntityByNickname(nickname);
+    public PersonVo login(String username, String password) {
+        PersonEntity person = personRepository.findPersonEntityByUsername(username);
         if (person.getPassword() == password) {
             return new PersonVo(person);
         }
@@ -37,7 +37,7 @@ public class LogServiceImpl implements LogService {
     @Override
     @Transactional
     public void deleteProfile(PersonVo personVo, String password) {
-        PersonEntity person = personRepository.findPersonEntityByNickname(personVo.getNickname());
+        PersonEntity person = personRepository.findPersonEntityByUsername(personVo.getUsername());
         if (person.getPassword() == password) {
             personRepository.delete(person);
         }
@@ -45,7 +45,7 @@ public class LogServiceImpl implements LogService {
 
     @Override
     public PersonVo changePassword(PersonVo personVo, String oldPassword, String newPassword, String oneMorePassword) {
-        PersonEntity person = personRepository.findPersonEntityByNickname(personVo.getNickname());
+        PersonEntity person = personRepository.findPersonEntityByUsername(personVo.getUsername());
         if (person.getPassword() == oldPassword && newPassword == oneMorePassword) {
             person.setPassword(newPassword);
         }
